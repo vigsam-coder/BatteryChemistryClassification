@@ -5,7 +5,7 @@ import tensorflow as tf
 import os
 
 # Load configuration
-def load_config(config_file="./config/config.yaml"):
+def load_config(config_file="config/config.yaml"):
     with open(config_file, 'r') as file:
         return yaml.safe_load(file)
 
