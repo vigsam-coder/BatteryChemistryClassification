@@ -46,7 +46,7 @@ The following transformer models have been trained and evaluated for text classi
 
 3. Download and scrap scientific data
     ```bash
-   python BatteryChemistryClassification/battery_data.py BatteryChemistryClassification/Dataset/battery.csv BatteryChemistryClassification/Dataset/df_processed.csv --debug
+   python BatteryChemistryClassification/battery_data.py Dataset/battery.csv Dataset/df_processed.csv --debug
 
 4. Change the model configurations in
     ```bash
