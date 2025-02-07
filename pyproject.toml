@@ -12,7 +12,6 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.8"
 
-# Corrected dependencies list without version for ast and re
 dependencies = [
     "pandas>=2.0.0",
     "numpy>=1.23.0",
