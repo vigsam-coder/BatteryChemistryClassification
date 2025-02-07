@@ -36,6 +36,7 @@ The following transformer models have been trained and evaluated for text classi
    ```bash
    git clone https://github.com/yourusername/BatteryChemistryClassification.git
    cd BatteryChemistryClassification
+   pip install .
 
 2. Create a virtual environment (optional but recommended):
     ```bash
@@ -44,13 +45,13 @@ The following transformer models have been trained and evaluated for text classi
 
 3. Download and scrap scientific data
     ```bash
-   python download_v1.py ./Dataset/battery.csv ./Dataset/df_processed.csv --debug
+   python BatteryChemistryClassification/battery_data.py BatteryChemistryClassification/Dataset/battery.csv BatteryChemistryClassification/Dataset/df_processed.csv --debug
 
 4. Change the model configurations in
     ```bash
-    config/config.yaml
+    BatteryChemistryClassification/config/config.yaml
    
 5. Train the LLM model
    ```bash
-    python training.py
+    python BatteryChemistryClassification/training.py
 

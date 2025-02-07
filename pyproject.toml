@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,38 +9,27 @@ description = "A Python package for battery chemistry classification"
 authors = [
     { name = "Vignesh", email = "vigneshirtt@alumni.iitm.ac.in" }
 ]
-license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.8"
 
-[tool.poetry.dependencies]
-python = ">=3.8,<3.12"
-pandas = "^2.0.0"
-numpy = "^1.23.0"
-tensorflow = "^2.12.0"
-transformers = "^4.30.0"
-torch = "^2.0.0"
-argparse = "^1.4.0"
-ast = "^0.0.1"
-re = "^2.2.1"
-tqdm = "^4.66.0"
-beautifulsoup4 = "^4.12.2"
-habanero = "^1.2.3"
-doi2bib = "^0.1.8"
-requests = "*"
-tensorflow-keras = { version = "2.16.0", optional = true }
-
-[project.optional-dependencies]
-dev = ["pytest", "black", "flake8", "mypy"]
-docs = ["sphinx", "sphinx-rtd-theme"]
-
-[project.urls]
-Homepage = "https://github.com/yourusername/battery-forecast-ai"
-Repository = "https://github.com/yourusername/battery-forecast-ai"
-Issues = "https://github.com/yourusername/battery-forecast-ai/issues"
+# Corrected dependencies list without version for ast and re
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.23.0",
+    "tensorflow>=2.12.0",
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "argparse>=1.4.0",
+    "tqdm>=4.66.0",
+    "beautifulsoup4>=4.12.2",
+    "habanero>=1.2.3",
+    "doi2bib>=0.1.8",
+    "requests",
+    "tf-keras>=2.16.0"
+]
 
 [tool.setuptools]
-packages = ["battery_forecast_ai"]
+packages = ["BatteryChemistryClassification"]
 
 [tool.black]
 line-length = 88
@@ -53,3 +42,4 @@ ignore_missing_imports = true
 minversion = "6.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
+
