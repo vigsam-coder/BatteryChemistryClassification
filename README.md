@@ -32,16 +32,17 @@ The following transformer models have been trained and evaluated for text classi
 - **LongFormer** (Efficient Transformer for Long Documents)  
 
 ## 🛠️ Installation  
-1. Clone the repository:  
+1. Create a virtual environment (optional but recommended):
+    ```bash
+   python3 -m venv env  
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
+   
+2. Clone the repository:  
    ```bash
    git clone https://github.com/yourusername/BatteryChemistryClassification.git
    cd BatteryChemistryClassification
    pip install .
 
-2. Create a virtual environment (optional but recommended):
-    ```bash
-   python3 -m venv env  
-   source env/bin/activate  # On Windows use `env\Scripts\activate`
 
 3. Download and scrap scientific data
     ```bash
