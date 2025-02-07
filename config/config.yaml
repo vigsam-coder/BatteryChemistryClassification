@@ -1,0 +1,21 @@
+model_name: "bert-base-uncased"      # Model selection ('allenai/longformer-base-4096','microsoft/deberta-large', 'roberta-base','bert-base-uncased', etc.)
+max_len: 512                                   # Max token length for the tokenizer (512,1024,4096)
+epochs: 3                                       # Number of epochs to train
+batch_size: 2                                   # Batch size during training
+learning_rate: 0.00002                          # Learning rate for the optimizer
+num_classes: 41                                 # Number of output classes for classification
+warmup_steps: 1000                              # Number of steps for learning rate warmup
+weight_decay: 0.9                               # Weight decay for regularization
+adam_epsilon: 1e-8                              # Epsilon parameter for Adam optimizer
+scheduler_type: "linear"                        # Type of scheduler ('linear', 'cosine', etc.)
+gradient_accumulation_steps: 1                  # Number of steps to accumulate gradients
+gradient_clipping: 1.0                          # Maximum gradient value for clipping
+dropout_rate: 0.1                               # Dropout rate for regularization
+early_stopping_patience: 3                      # Early stopping patience (number of epochs with no improvement)
+save_checkpoints: true                          # Whether to save model checkpoints
+checkpoint_dir: "./checkpoints"                 # Directory for saving checkpoints
+logging_dir: "./logs"                           # Directory for logging
+seed: 42                                        # Random seed for reproducibility
+disable_progress_bar: false                     # Disable progress bar if set to True
+validation_split: 0.2                           # Fraction of the data to use for validation
+data_path: 'Dataset/df_processed.csv'           # Processed Data path
