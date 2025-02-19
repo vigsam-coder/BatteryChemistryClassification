@@ -39,7 +39,7 @@ The following transformer models have been trained and evaluated for text classi
    
 2. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/BatteryChemistryClassification.git
+   git clone https://github.com/vigsam-coder/BatteryChemistryClassification.git
    cd BatteryChemistryClassification
    pip install .
 
